@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Validating credentials of the user');
+router.post('/', function(req, res, next) {
+  console.log(req,res)
+  res.send(req);
 });
 
 module.exports = router;

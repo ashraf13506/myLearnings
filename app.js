@@ -3,12 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors=require('cors')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const loginRoter=require('./routes/user_login')
 
 var app = express();
+
+//usage of cors policy for all doomails
+app.use(cors()); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
