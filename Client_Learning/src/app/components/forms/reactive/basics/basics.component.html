@@ -1,0 +1,7 @@
+<p>Basics Form Component</p>
+
+<label for="name">Name:</label>
+<input id="name" type="text" [formControl]="name">
+<button type="button" (click)="updateValue()">UPDATE</button>
+
+{{name.value}}
