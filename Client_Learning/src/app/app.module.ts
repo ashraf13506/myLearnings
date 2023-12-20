@@ -7,14 +7,16 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BasicsComponent } from './components/forms/reactive/basics/basics.component';
-import { FormgroupComponent } from './components/forms/reactive/formgroup/formgroup.component'
+import { FormgroupComponent } from './components/forms/reactive/formgroup/formgroup.component';
+import { FormgrouparrayComponent } from './components/forms/reactive/formgrouparray/formgrouparray.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BasicsComponent,
-    FormgroupComponent
+    FormgroupComponent,
+    FormgrouparrayComponent
 
   ],
   imports: [

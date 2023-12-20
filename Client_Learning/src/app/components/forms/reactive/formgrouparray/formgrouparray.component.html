@@ -1,0 +1,13 @@
+<h1> Welcome to LS_Clio</h1>
+<form [formGroup]="patient_form">
+
+  <div formArrayName="aliases">
+  <button type="button" (click)="addAlias()">ADD Alisas</button>
+
+  <div *ngFor="let alias of aliases.controls; let i=index">
+  <label for="alias-{{i}}" >Alias:</label>
+  <input id="alias-{{i}}" type="text" [formControlName]="i">
+  </div>
+  </div>
+
+  </form>
