@@ -1,4 +1,4 @@
-<h1> Welcome to LS_Clio</h1>
+<!-- <h1> Welcome to LS_Clio</h1>
 <form [formGroup]="patient_form">
 
   <div formArrayName="aliases">
@@ -10,4 +10,31 @@
   </div>
   </div>
 
-  </form>
+  </form> -->
+
+
+
+  <form [formGroup]="userdetails_form">
+    <label for="userdetails">Enter User Details</label>
+    <label for="username">User Name:</label>
+    <input id="username" type="text" [(ngModel)]="userName" formControlName="userName">
+    <label for="gender">Gender :</label>
+    <input type="radio" [(ngModel)]="gender" value="male" formControlName="gender">Male
+    <input type="radio" [(ngModel)]="gender" value="female" formControlName="gender">Female
+    <br>
+    <div formArrayName="adduserformArray">
+    <div *ngFor="let userform of UserForm.controls; let i=index">
+      <label for="userform-{{i}}" >userform:</label>
+      <input id="userform-{{i}}" type="text" [formControlName]="i">
+      </div>
+      </div>
+    <button (click)="formValues()" type="submit">Submit</button>
+    </form>
+
+
+    <button (click)="addUserForm()">ADD Values</button>
+
+
+
+
+
